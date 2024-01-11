@@ -10,4 +10,5 @@ public interface UserService {
 
     String addUser(UserDTO userDTO);
     User login(String username, String password);
+    User findByEmail(String email);
 }

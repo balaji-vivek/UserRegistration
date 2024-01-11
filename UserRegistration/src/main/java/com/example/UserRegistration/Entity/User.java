@@ -20,6 +20,10 @@ public class User {
     @Column(name = "password",length = 100)
     private String password;
     
+    @Column(name = "reset_token") // Added column for reset token
+    private String resetToken;
+
+    
     public User() {
     }
 
@@ -66,6 +70,14 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+    
+    public String getResetToken() {
+        return resetToken;
+    }
+
+    public void setResetToken(String resetToken) {
+        this.resetToken = resetToken;
+    }
 
     @Override
     public String toString() {
@@ -74,6 +86,7 @@ public class User {
                 ", username='" + username + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
+                ", resetToken='" + resetToken + '\'' +
                 '}';
     }
 }

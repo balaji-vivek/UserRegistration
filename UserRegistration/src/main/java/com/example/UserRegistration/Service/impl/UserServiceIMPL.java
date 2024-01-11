@@ -71,4 +71,16 @@ public class UserServiceIMPL implements UserService {
 		}
 	}
 
+	@Override
+	public User findByEmail(String email) {
+	    User user = userRepo.findByEmail(email);
+
+	    if (user != null) {
+	        return user;
+	    } else {
+	        // Handle the case where the email is not found
+	        throw new LoginException("User not found for email: " , email);
+	    }
+	}
+
 }

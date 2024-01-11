@@ -12,6 +12,7 @@ public class UserDTO {
     private String username;
     private String email;
     private String password;
+    private String resetToken; // Added resetToken field
 
     public UserDTO() {
     }
@@ -54,6 +55,14 @@ public class UserDTO {
     public void setPassword(String password) {
         this.password = password;
     }
+    
+    public String getResetToken() {
+        return resetToken;
+    }
+
+    public void setResetToken(String resetToken) {
+        this.resetToken = resetToken;
+    }
 
 
     @Override
@@ -63,6 +72,7 @@ public class UserDTO {
                 ", username='" + username + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
+                 ", resetToken='" + resetToken + '\'' +
                 '}';
     }
 }
